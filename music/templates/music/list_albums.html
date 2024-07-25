@@ -1,0 +1,7 @@
+{% for album in albums %}
+{% if album.id == album_selected %}
+<li class="selected">{{ album.name }}</li>
+{% else %}
+<li><a href="{{ album.get_absolute_url }}">{{ album.name }}</a></li>
+{% endif %}
+{% endfor %}
